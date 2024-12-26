@@ -9,73 +9,135 @@
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f9;
-            color: #333;
+            background-color: #333333; /* Dark background */
+            color: #ffffff; /* White font color */
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
         }
-        header {
-            background-color: #333;
-            color: white;
-            padding: 1em 0;
+        .main-content {
+            display: flex;
+            flex: 1;
+        }
+        .left-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
             text-align: center;
+            padding: 10px;
         }
-        nav {
-            margin: 1em 0;
-            text-align: center;
+        .right-section {
+            width: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            flex-direction: column;
+            text-align: left;
+            padding: 10px;
         }
-        nav a {
-            margin: 0 15px;
+        .profile-img {
+            max-height: 90%;
+            max-width: 90%;
+            border-radius: 50%; /* Circular image */
+            object-fit: cover;
+        }
+        .portfolio-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 1.5em;
+            color: #ffffff;
+            margin-bottom: 10px;
+        }
+        .portfolio-title {
+            font-size: 2em;
+            color: #ffffff; /* White color for the title */
+        }
+        .nav-links {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: flex-end; /* Align links to the right */
+            align-items: center;
+        }
+        .nav-links li {
+            margin-left: 20px; /* Space out the links */
+        }
+        .nav-links a {
             text-decoration: none;
-            color: #333;
+            color: #ffffff;
         }
-        nav a:hover {
-            color: #007BFF;
+        .nav-links {
+            width: 24px;
+            height: 24px;
+            vertical-align: middle;
         }
-        section {
-            padding: 20px;
-            max-width: 800px;
-            margin: auto;
+        .nav-links a:hover {
+            color: #1e6091;
+        }
+        .name {
+            font-size: 3em; 
+            margin: 10px 0;
+        }
+        .role {
+            font-size: 1.5em;
         }
         footer {
-            background-color: #333;
-            color: white;
+            background-color: #333333;
+            color: #ffffff;
             text-align: center;
             padding: 10px 0;
-            position: fixed;
-            width: 100%;
-            bottom: 0;
+        }
+        header {
+            background-color: #333333;
+            color: #ffffff;
+            margin: 20px 60px;
+        }
+        .action-links {
+            margin-top: 20px;
+        }
+        .action-links a {
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #2679a3;
+            padding: 10px 15px;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .action-links a:hover {
+            background-color: #1e6091;
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Dharmang Shah's Portfolio</h1>
+        <div class="portfolio-header">
+            <div class="portfolio-title">Portfolio</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
     </header>
-
-    <nav>
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-    </nav>
-
-    <section id="about">
-        <h2>About Me</h2>
-        <p>Hi, I'm Dharmang Shah, a computer science enthusiast with a passion for solving problems and creating impactful solutions. I am currently pursuing my Bachelor's degree at California State University, Sacramento, and planning to advance my education at Georgia Tech University. Welcome to my portfolio!</p>
-    </section>
-
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><strong>Project 1:</strong> <em>Description of Project 1.</em></li>
-            <li><strong>Project 2:</strong> <em>Description of Project 2.</em></li>
-            <li><strong>Project 3:</strong> <em>Description of Project 3.</em></li>
-        </ul>
-    </section>
-
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:dharmang.shah@example.com">dharmang.shah@example.com</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/dharmangshah" target="_blank">linkedin.com/in/dharmangshah</a></p>
-    </section>
+    <div class="main-content">
+        <div class="left-section">
+            <img src="profile.jpeg" alt="Dharmang Shah" class="profile-img">
+        </div>
+        <div class="right-section">
+            <div class="role">Hello, my name is</div>
+            <div class="name">Dharmang Shah</div>
+            <div class="role">Computer Science student (sophomore year)</div>
+            <div class="action-links">
+                <a href="https://www.linkedin.com/in/your-linkedin-profile" target="_blank">in</a>
+                <a href="resume.pdf" download>Download Resume</a>
+            </div>
+        </div>
+    </div>
 
     <footer>
         &copy; 2024 Dharmang Shah
